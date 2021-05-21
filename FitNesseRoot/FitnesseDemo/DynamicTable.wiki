@@ -1,0 +1,10 @@
+---
+Test
+---
+!include .FitnesseDemo.PathAndTestType
+
+| ddt: add change |
+| # description | 1c | 5c | 10c | 25c | 50c | $1 | total cents? | $ total? |
+| some simple addition | 2 | 2 | 4 | 0 | 0 | 0 | 52 | 0.52 |
+| save the total cents in a symbol | 56 | 0 | 0 | 0 | 1 | 20 | $totalCents= | 21.06 |
+| now use the total cents that were stored | $totalCents | 0 | 0 | 0 | 0 | 10 | 3106 | ~=31.1 | An example for ValueComparisons |

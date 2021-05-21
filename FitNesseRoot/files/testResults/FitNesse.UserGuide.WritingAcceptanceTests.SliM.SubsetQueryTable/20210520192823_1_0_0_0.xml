@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20210410</FitNesseVersion>
+  <rootPath>FitNesse.UserGuide.WritingAcceptanceTests.SliM.SubsetQueryTable</rootPath>
+  <result>
+    <counts>
+      <right>4</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <date>2021-05-20T19:28:23+05:30</date>
+    <runTimeInMillis>217</runTimeInMillis>
+    <content>&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Included page: &lt;a href="FitNesse.UserGuide.WritingAcceptanceTests.SliM.SetUp"&gt;.FitNesse.UserGuide.WritingAcceptanceTests.SliM.SetUp&lt;/a&gt; &lt;a href="FitNesse.UserGuide.WritingAcceptanceTests.SliM.SetUp?edit&amp;amp;redirectToReferer=true&amp;amp;redirectAction=" class="edit"&gt;(edit)&lt;/a&gt;&lt;/p&gt;
+	&lt;div&gt;&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;setup&lt;/p&gt;
+	&lt;div&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;import&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;fitnesse.slim.test&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;fitnesse.fixtures&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;Subset Query:employees hired before&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan="3"&gt;10-Dec-1980&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;employee number&lt;/td&gt;
+		&lt;td&gt;first name&lt;/td&gt;
+		&lt;td&gt;last name&lt;/td&gt;
+		&lt;td&gt;hire date&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;1429&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;Bob&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;Martin&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;10-Oct-1974&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;The first thing to notice is the &lt;i&gt;Subset Query:&lt;/i&gt; in the first cell of the table.  This tells the Slim table processor that this is a subset query table. Subset query tables are almost identical to &lt;a href="FitNesse.UserGuide.WritingAcceptanceTests.SliM.QueryTable"&gt;Query tables&lt;/a&gt; except that we only need to put those rows into the table that we want to make sure to exist in the query response.&lt;br/&gt;&lt;br/&gt;Our definition of subset here is not &lt;i&gt;proper&lt;/i&gt; subset. Thus the table may contain all the rows of the query response.&lt;br/&gt;</content>
+    <relativePageName>SubsetQueryTable</relativePageName>
+    <instructions>
+      <instructionResult>
+        <instruction>{id='import_0_0', instruction='import', path='fitnesse.slim.test'}</instruction>
+        <slimResult>pass(fitnesse.slim.test)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_0_0</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>fitnesse.slim.test</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='import_0_1', instruction='import', path='fitnesse.fixtures'}</instruction>
+        <slimResult>pass(fitnesse.fixtures)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_0_1</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>fitnesse.fixtures</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='queryTable_1_0', instruction='make', instanceName='queryTable_1', className='EmployeesHiredBefore', args=[10-Dec-1980]}</instruction>
+        <slimResult>pass(Subset Query:employees hired before)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>queryTable_1_0</instructionId>
+          <col>0</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>Subset Query:employees hired before</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='queryTable_1_2', instruction='call', instanceName='queryTable_1', methodName='query', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>queryTable_1_2</instructionId>
+          <type>QueryTableExpectation</type>
+        </expectation>
+      </instructionResult>
+    </instructions>
+  </result>
+  <executionLog>
+    <testSystem>slim:fitnesse.slim.SlimService</testSystem>
+    <command>java -cp lib/*.jar;C:\Users\nkauv\FitnesseExamples\fitnesse-standalone.jar fitnesse.slim.SlimService 1</command>
+    <exitCode>0</exitCode>
+    <stdOut></stdOut>
+    <stdErr></stdErr>
+  </executionLog>
+  <finalCounts>
+    <right>1</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>613</totalRunTimeInMillis>
+</testResults>
+

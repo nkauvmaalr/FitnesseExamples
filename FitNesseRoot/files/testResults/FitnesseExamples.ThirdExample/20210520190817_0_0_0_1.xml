@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20210410</FitNesseVersion>
+  <rootPath>FitnesseExamples.ThirdExample</rootPath>
+  <result>
+    <counts>
+      <right>0</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>4</exceptions>
+    </counts>
+    <date>2021-05-20T19:08:18+05:30</date>
+    <runTimeInMillis>143</runTimeInMillis>
+    <content>&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;Query:employees hired before &lt;span class="error"&gt;Could not invoke constructor for EmployeesHiredBefore[1]&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan="4"&gt;10-Dec-1980&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;company number&lt;/td&gt;
+		&lt;td&gt;employee number&lt;/td&gt;
+		&lt;td&gt;first name&lt;/td&gt;
+		&lt;td&gt;last name&lt;/td&gt;
+		&lt;td&gt;hire date&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;4808147&lt;/td&gt;
+		&lt;td&gt;9942&lt;/td&gt;
+		&lt;td&gt;Bill&lt;/td&gt;
+		&lt;td&gt;Mitchell&lt;/td&gt;
+		&lt;td&gt;19-Dec-1966&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;4808147&lt;/td&gt;
+		&lt;td&gt;1429&lt;/td&gt;
+		&lt;td&gt;Bob&lt;/td&gt;
+		&lt;td&gt;Martin&lt;/td&gt;
+		&lt;td&gt;10-Oct-1975&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;Query:employees hired before &lt;span class="error"&gt;Could not invoke constructor for EmployeesHiredBefore[1]&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan="3"&gt;10-Dec-1980&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;employee number&lt;/td&gt;
+		&lt;td&gt;first name&lt;/td&gt;
+		&lt;td&gt;last name&lt;/td&gt;
+		&lt;td&gt;hire date&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;1429&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;8832&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</content>
+    <relativePageName>ThirdExample</relativePageName>
+    <instructions>
+      <instructionResult>
+        <instruction>{id='queryTable_0_0', instruction='make', instanceName='queryTable_0', className='EmployeesHiredBefore', args=[10-Dec-1980]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>queryTable_0_0</instructionId>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>Could not invoke constructor for EmployeesHiredBefore[1]</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='queryTable_0_2', instruction='call', instanceName='queryTable_0', methodName='query', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>queryTable_0_2</instructionId>
+          <type>QueryTableExpectation</type>
+          <evaluationMessage>The instance queryTable_0.query. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='queryTable_1_0', instruction='make', instanceName='queryTable_1', className='EmployeesHiredBefore', args=[10-Dec-1980]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>queryTable_1_0</instructionId>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>Could not invoke constructor for EmployeesHiredBefore[1]</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='queryTable_1_2', instruction='call', instanceName='queryTable_1', methodName='query', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>queryTable_1_2</instructionId>
+          <type>QueryTableExpectation</type>
+          <evaluationMessage>The instance queryTable_1.query. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+    </instructions>
+  </result>
+  <executionLog>
+    <testSystem>slim:fitnesse.slim.SlimService</testSystem>
+    <command>java -cp C:\Users\nkauv\FitnesseExamples\fitnesse-standalone.jar fitnesse.slim.SlimService 1</command>
+    <exitCode>0</exitCode>
+    <stdOut></stdOut>
+    <stdErr></stdErr>
+  </executionLog>
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>1</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>529</totalRunTimeInMillis>
+</testResults>
+

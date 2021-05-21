@@ -1,0 +1,12 @@
+!*> setup
+
+!define TEST_SYSTEM {slim}
+
+
+!path C:\Users\nkauv\FitnesseExamples\out\production\FitnesseExamples\
+
+!|import|
+|com.company.Fixtures|
+
+
+*!

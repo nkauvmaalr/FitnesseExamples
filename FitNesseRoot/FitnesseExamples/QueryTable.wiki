@@ -1,0 +1,24 @@
+---
+Test
+---
+!include .FitnesseExamples.ImportLibrary
+
+|Query:employees hired before|10-Dec-1980                                     |
+|company number              |employee number|first name|last name|hire date  |
+|4808147                     |1429           |Bob       |Martin   |10-Oct-1975|
+
+
+|Query:employees hired before|10-Dec-1980                   |
+|employee number             |first name|last name|hire date|
+|1429                        |          |         |         |
+|8832                        |          |         |         |
+
+|Subset Query:employees hired before|10-Dec-1980                     |
+|employee number                    |first name|last name|hire date  |
+|1429                               |Bob       |Martin   |10-Oct-1974|
+
+|Ordered query:employees hired before|10-Dec-1980                     |
+|employee number                     |first name|last name|hire date  |
+|8832                                |James     |Grenning |12-May-1999|
+|1429                                |Bob       |Martin   |10-Oct-1975|
+|9924                                |Bill      |Mitchell |19-Dec-1966|

@@ -1,0 +1,8 @@
+---
+Test
+---
+!include PathAndTestType
+
+!|ArrayFixture|
+|list     |get list?    |
+|[2,3,4,5]|[2, 3, 4, 5]|

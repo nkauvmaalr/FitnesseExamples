@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<suiteResults>
+  <FitNesseVersion>v20210410</FitNesseVersion>
+  <rootPath>FitnesseExamples</rootPath>
+  <pageHistoryReference>
+    <name>FitnesseExamples.FirstExample</name>
+    <date>2021-05-20T14:12:37+05:30</date>
+    <pageHistoryLink>FitnesseExamples.FirstExample?pageHistory&amp;resultDate=20210520141237</pageHistoryLink>
+    <counts>
+      <right>8</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <runTimeInMillis>168</runTimeInMillis>
+  </pageHistoryReference>
+  <executionLog>
+    <testSystem>slim:fitnesse.slim.SlimService</testSystem>
+    <command>java -cp C:\Users\nkauv\FitnesseExamples\src\com\company;C:\Users\nkauv\FitnesseExamples\fitnesse-standalone.jar fitnesse.slim.SlimService 1</command>
+    <exitCode>0</exitCode>
+    <stdOut></stdOut>
+    <stdErr></stdErr>
+  </executionLog>
+  <finalCounts>
+    <right>1</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>588</totalRunTimeInMillis>
+</suiteResults>
+

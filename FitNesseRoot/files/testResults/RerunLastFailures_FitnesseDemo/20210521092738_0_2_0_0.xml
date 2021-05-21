@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<suiteResults>
+  <FitNesseVersion>v20210410</FitNesseVersion>
+  <rootPath>RerunLastFailures_FitnesseDemo</rootPath>
+  <pageHistoryReference>
+    <name>FitnesseDemo.DecisionTable</name>
+    <date>2021-05-21T09:27:38+05:30</date>
+    <pageHistoryLink>FitnesseDemo.DecisionTable?pageHistory&amp;resultDate=20210521092738</pageHistoryLink>
+    <counts>
+      <right>7</right>
+      <wrong>1</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <runTimeInMillis>101</runTimeInMillis>
+  </pageHistoryReference>
+  <pageHistoryReference>
+    <name>FitnesseDemo.QueryTable</name>
+    <date>2021-05-21T09:27:38+05:30</date>
+    <pageHistoryLink>FitnesseDemo.QueryTable?pageHistory&amp;resultDate=20210521092738</pageHistoryLink>
+    <counts>
+      <right>6</right>
+      <wrong>3</wrong>
+      <ignores>6</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <runTimeInMillis>23</runTimeInMillis>
+  </pageHistoryReference>
+  <executionLog>
+    <testSystem>slim:fitnesse.slim.SlimService</testSystem>
+    <command>java -cp C:\Users\nkauv\FitnesseExamples\out\production\FitnesseExamples\;C:\Users\nkauv\FitnesseExamples\fitnesse-standalone.jar fitnesse.slim.SlimService 1</command>
+    <exitCode>0</exitCode>
+    <stdOut></stdOut>
+    <stdErr></stdErr>
+  </executionLog>
+  <finalCounts>
+    <right>0</right>
+    <wrong>2</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>447</totalRunTimeInMillis>
+</suiteResults>
+

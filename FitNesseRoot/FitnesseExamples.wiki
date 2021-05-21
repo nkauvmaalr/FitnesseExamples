@@ -1,0 +1,6 @@
+---
+Prune
+---
+[[Decision Table][.FitnesseExamples.DemoDecisionTable]]
+[[Dynamic Decision Table][.FitnesseExamples.DynamicDecisionTable]]
+[[Query Table][.FitnesseExamples.QueryTable]]

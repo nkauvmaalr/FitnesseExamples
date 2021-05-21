@@ -1,0 +1,6 @@
+---
+Suite
+---
+[[Decision Table][.FitnesseExamples.DecisionTable]]
+[[Dynamic Decision Table][.FitnesseExamples.DynamicDecisionTable]]
+[[Query Table][.FitnesseExamples.QueryTable]]

@@ -1,0 +1,54 @@
+!include .FitnesseDemo.PathAndTestType
+
+!| Generic Fixture | Address | 123 | Nutley Street | New York | 21019 | NY |
+| getStreetNo | | 123 |
+| getCity | | New York |
+| state=getState | | NY |
+| getFullAddress | | 123 Nutley Street, New York, NY - 21019 |
+| setStreetNo | 111 |
+| setPostcode | 20133 |
+| getPostcode | | 20133 |
+| getStreetNo | | 111 |
+| getState | | state= |
+| setName | John Smith |
+| name=getName | | John Smith |
+
+!| Generic Fixture | Address$Name | name= |
+| getSurname | | Smith |
+| getFirstname | | John |
+| toString | | John Smith |
+
+!| Generic Fixture | name= |
+| getSurname | | Smith |
+| getFirstname | | John |
+| toString | | John Smith |
+
+!| Generic Fixture | java.lang.String | It's a cool fixture |
+| toString | |
+| i=indexOf | cool | | 7 |
+| this=concat | ; indeed | | It's a cool fixture; indeed |
+| equals | It's a cool fixture; indeed | | true |
+| equalsIgnoreCase | blank | | false |
+| str=concat | blank | | It's a cool fixture; indeed |
+| equals | str= | | true |
+| matches | ^.*cool fix.*$ | | true |
+| indexOf | cool | | i= |
+| arr=toCharArray | |
+| concat | !!! | | It's a cool fixture; indeed !!! |        
+
+!| Generic Fixture | java.lang.String | arr= |
+| toString | | str= |
+| toCharArray | | arr= |        
+
+!| Generic Fixture | java.lang.String | str= |
+| toString | | str= |
+| toCharArray | | arr= |       
+
+!| Generic Fixture | java.lang.String | array:G,e,n,e,r,i,c,F,i,x,t,u,r,e |
+| toString | | GenericFixture |
+| toCharArray | | G,e,n,e,r,i,c,F,i,x,t,u,r,e |       
+
+!| Generic Fixture | java.lang.Math |
+| abs | i= | | 7 |
+
+

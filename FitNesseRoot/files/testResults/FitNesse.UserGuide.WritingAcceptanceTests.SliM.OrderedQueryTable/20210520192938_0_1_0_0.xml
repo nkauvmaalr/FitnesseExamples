@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20210410</FitNesseVersion>
+  <rootPath>FitNesse.UserGuide.WritingAcceptanceTests.SliM.OrderedQueryTable</rootPath>
+  <result>
+    <counts>
+      <right>5</right>
+      <wrong>4</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <date>2021-05-20T19:29:39+05:30</date>
+    <runTimeInMillis>132</runTimeInMillis>
+    <content>&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Included page: &lt;a href="FitNesse.UserGuide.WritingAcceptanceTests.SliM.SetUp"&gt;.FitNesse.UserGuide.WritingAcceptanceTests.SliM.SetUp&lt;/a&gt; &lt;a href="FitNesse.UserGuide.WritingAcceptanceTests.SliM.SetUp?edit&amp;amp;redirectToReferer=true&amp;amp;redirectAction=" class="edit"&gt;(edit)&lt;/a&gt;&lt;/p&gt;
+	&lt;div&gt;&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;setup&lt;/p&gt;
+	&lt;div&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;import&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;fitnesse.slim.test&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;fitnesse.fixtures&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;Ordered query:employees hired before&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan="3"&gt;10-Dec-1980&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;employee number&lt;/td&gt;
+		&lt;td&gt;first name&lt;/td&gt;
+		&lt;td&gt;last name&lt;/td&gt;
+		&lt;td&gt;hire date&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;8832&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;James&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;Grenning&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;[1&lt;span class="diff"&gt;5&lt;/span&gt;-&lt;span class="diff"&gt;Dec&lt;/span&gt;-19&lt;span class="diff"&gt;7&lt;/span&gt;9] &lt;span class="fail"&gt;expected [1&lt;span class="diff"&gt;2&lt;/span&gt;-&lt;span class="diff"&gt;May&lt;/span&gt;-199&lt;span class="diff"&gt;9&lt;/span&gt;]&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;[1429] &lt;span class="fail"&gt;out of order: row 1&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;Bob&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;Martin&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;[10-Oct-197&lt;span class="diff"&gt;4&lt;/span&gt;] &lt;span class="fail"&gt;expected [10-Oct-197&lt;span class="diff"&gt;5&lt;/span&gt;]&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;[9924] &lt;span class="fail"&gt;missing&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;Bill&lt;/td&gt;
+		&lt;td&gt;Mitchell&lt;/td&gt;
+		&lt;td&gt;19-Dec-1966&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;br/&gt;The first thing to notice is the &lt;i&gt;Ordered query:&lt;/i&gt; in the first cell of the table.  This tells the Slim table processor that this is an ordered query table.  Ordered query tables are almost identical to &lt;a href="FitNesse.UserGuide.WritingAcceptanceTests.SliM.QueryTable"&gt;Query tables&lt;/a&gt; except that order is important.  The order of the rows in the table must be the same as the order of the rows returned by the query.&lt;br/&gt;&lt;br/&gt;The matching algorithm is &lt;i&gt;relative&lt;/i&gt; which means that if the table rows have the following order &lt;span class="code"&gt;{A, B, C}&lt;/span&gt; and the query returns &lt;span class="code"&gt;{B, C, A}&lt;/span&gt; then rows &lt;span class="code"&gt;B&lt;/span&gt; and &lt;span class="code"&gt;C&lt;/span&gt; will be green, and only row &lt;span class="code"&gt;A&lt;/span&gt; will be marked in red as &lt;i&gt;out of order: row 3&lt;/i&gt;.  The row number in the error message is the ordinal position (based on 1) of that row in the query result.&lt;br/&gt;&lt;br/&gt;A little thought should convince you that this means that the first row in the &lt;i&gt;table&lt;/i&gt; can never be out of order.&lt;br/&gt;</content>
+    <relativePageName>OrderedQueryTable</relativePageName>
+    <instructions>
+      <instructionResult>
+        <instruction>{id='import_0_0', instruction='import', path='fitnesse.slim.test'}</instruction>
+        <slimResult>pass(fitnesse.slim.test)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_0_0</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>fitnesse.slim.test</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='import_0_1', instruction='import', path='fitnesse.fixtures'}</instruction>
+        <slimResult>pass(fitnesse.fixtures)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_0_1</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>fitnesse.fixtures</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='queryTable_1_0', instruction='make', instanceName='queryTable_1', className='EmployeesHiredBefore', args=[10-Dec-1980]}</instruction>
+        <slimResult>pass(Ordered query:employees hired before)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>queryTable_1_0</instructionId>
+          <col>0</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>Ordered query:employees hired before</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='queryTable_1_2', instruction='call', instanceName='queryTable_1', methodName='query', args=[]}</instruction>
+        <slimResult>pass()</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>queryTable_1_2</instructionId>
+          <type>QueryTableExpectation</type>
+        </expectation>
+      </instructionResult>
+    </instructions>
+  </result>
+  <executionLog>
+    <testSystem>slim:fitnesse.slim.SlimService</testSystem>
+    <command>java -cp lib/*.jar;C:\Users\nkauv\FitnesseExamples\fitnesse-standalone.jar fitnesse.slim.SlimService 1</command>
+    <exitCode>0</exitCode>
+    <stdOut></stdOut>
+    <stdErr></stdErr>
+  </executionLog>
+  <finalCounts>
+    <right>0</right>
+    <wrong>1</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>525</totalRunTimeInMillis>
+</testResults>
+
