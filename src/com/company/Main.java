@@ -10,5 +10,6 @@ public class Main {
         GithubAccount githubAccount = new GithubAccount();
         githubAccount.setUrl("https://api.github.com/users/NAVAL-KUMAR");
         System.out.println(githubAccount.getResponse());
+        System.out.println(githubAccount.getResponseBody());
     }
 }

@@ -6,3 +6,6 @@ Suite
 [[Query Table][.FitnesseDemo.QueryTable]]
 [[Generic Example][.FitnesseDemo.GenericExample]]
 [[Array List][.FitnesseDemo.ArrayList]]
+[[Github Response][.FitnesseDemo.GithubResponse]]
+[[Login Dialog Driver][.FitnesseDemo.LoginDialogDriver]]
+[[Bowling][.FitnesseDemo.Bowling]]

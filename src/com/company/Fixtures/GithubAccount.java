@@ -6,19 +6,20 @@ import java.net.http.*;
 
 public class GithubAccount {
     private  String url;
+    private HttpResponse<String> response;
 
-    public void setUrl(String url) {
+    public void setUrl(String url) throws IOException, InterruptedException {
         this.url = url;
-    }
-
-    public int getResponse() throws IOException, InterruptedException {
         HttpClient httpClient = HttpClient.newBuilder().build();
         HttpRequest request = HttpRequest.newBuilder().uri(URI.create(url)).GET().build();
-        HttpResponse<String> response =  httpClient.send(request, HttpResponse.BodyHandlers.ofString());
-        return response.statusCode();
-//        System.out.println(response.statusCode());
-//        System.out.println(response.headers());
-//        System.out.println(response.body());
+        response =  httpClient.send(request, HttpResponse.BodyHandlers.ofString());
+    }
 
+    public int getResponse() {
+        return response.statusCode();
+
+    }
+    public String getResponseBody()  {
+        return response.body();
     }
 }
