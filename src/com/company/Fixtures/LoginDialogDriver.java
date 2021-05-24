@@ -13,9 +13,9 @@ public class LoginDialogDriver {
         this.confirmPassword = confirmPassword;
     }
 
-    public boolean loginWithUsernameAndPassword(String userName, String password) {
+    public boolean loginWithUsernameAndPassword(String userName, String password, String confirmPassword) {
         loginAttempts++;
-        boolean result = this.userName.equals(userName) && this.password.equals(password);
+        boolean result = this.userName.equals(userName) && this.password.equals(password) && this.password.equals(confirmPassword);
         if (result)
             message = String.format("%s logged in.", this.userName);
         else
@@ -27,8 +27,8 @@ public class LoginDialogDriver {
         return message;
     }
 
-    public String loginMessageAndLoginAttempts() {
-        return message+" "+loginAttempts;
+    public String loginMessageAndLoginAttempts(String addMessage,Integer no) {
+        return message+" "+loginAttempts+" "+addMessage+" "+no;
     }
 
     public int numberOfLoginAttempts() {

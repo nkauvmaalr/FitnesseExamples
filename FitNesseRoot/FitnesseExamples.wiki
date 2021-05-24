@@ -5,4 +5,5 @@ Prune
 [[Dynamic Decision Table][.FitnesseExamples.DynamicDecisionTable]]
 [[Query Table][.FitnesseExamples.QueryTable]]
 [[Github Response][.FitnesseExamples.GithubResponse]]
-[[Login Dialog Driver][.FitnesseExamples.LoginDialogDriver]]
+[[Login Dialog Driver (Script Table)][.FitnesseExamples.LoginDialogDriver]]
+[[Bowling (Table Table)][.FitnesseExamples.TableTable]]
