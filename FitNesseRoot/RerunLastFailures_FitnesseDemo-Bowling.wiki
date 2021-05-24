@@ -5,9 +5,6 @@ Suite
 
 !note This page is automatically generated when running tests. It will be overwritten by the next Suite or Test execution.
 
-Tests failed (first failure was at 2021-05-24T16:09:43.650445400):
+Tests failed (first failure was at 2021-05-24T16:08:32.071915300):
 
 !see [[FitnesseDemo.Bowling][.FitnesseDemo.Bowling]]
-!see [[FitnesseDemo.DecisionTable][.FitnesseDemo.DecisionTable]]
-!see [[FitnesseDemo.LoginDialogDriver][.FitnesseDemo.LoginDialogDriver]]
-!see [[FitnesseDemo.QueryTable][.FitnesseDemo.QueryTable]]

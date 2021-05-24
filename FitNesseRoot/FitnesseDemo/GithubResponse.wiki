@@ -1,0 +1,9 @@
+---
+Test
+---
+!include .FitnesseDemo.PathAndTestType 
+
+|script :github account                            |
+|set url|!-https://api.github.com/users/NAVAL-KUMAR-! |
+|check  |get response              |200              |
+|show   |get response body    |

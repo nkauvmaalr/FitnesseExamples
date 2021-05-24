@@ -1,0 +1,16 @@
+---
+Test
+---
+!include .FitnesseDemo.PathAndTestType 
+
+|script    |login dialog driver             |Bob     |xyzzy       |xyzzy                      |
+|login with|Bob                             |username|xyzzy       |and password|xyzzy         |
+|check     |login message                   |Bob logged in.                                   |
+|reject    |login with username             |Bob     |and         |bad password|password|xyzzy|
+|check     |login message                   |Bob not logged in.                               |
+|check not |login message                   |Bob logged in                               |
+|check     |login message and|Hello|login attempts |10|Bob not logged in. 2                                    |
+|ensure    |login with username             |Bob     |and password|xyzzy       |        |xyzzy|
+|note      |this is a comment                                                                 |
+|show      |number of login attempts                                                          |
+|$symbol=  |login message                                                                     |
