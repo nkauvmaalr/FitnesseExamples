@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20210410</FitNesseVersion>
+  <rootPath>FitnesseExamples.GithubResponse</rootPath>
+  <result>
+    <counts>
+      <right>0</right>
+      <wrong>1</wrong>
+      <ignores>0</ignores>
+      <exceptions>1</exceptions>
+    </counts>
+    <date>2021-05-23T14:40:52+05:30</date>
+    <runTimeInMillis>2323</runTimeInMillis>
+    <content>&lt;br/&gt;&lt;div class="collapsible"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Included page: &lt;a href="FitnesseExamples.ImportLibrary"&gt;ImportLibrary&lt;/a&gt; &lt;a href="FitnesseExamples.ImportLibrary?edit&amp;amp;redirectToReferer=true&amp;amp;redirectAction=" class="edit"&gt;(edit)&lt;/a&gt;&lt;/p&gt;
+	&lt;div&gt;&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;setup&lt;/p&gt;
+	&lt;div&gt;&lt;br/&gt;&lt;span class="meta"&gt;variable defined: TEST_SYSTEM=slim&lt;/span&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: C:\Users\nkauv\FitnesseExamples\out\production\FitnesseExamples\&lt;/span&gt;&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;import&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;com.company.Fixtures&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td colspan="2"&gt;&lt;span class="pass"&gt;github account&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;url&lt;/td&gt;
+		&lt;td&gt;response?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;&lt;a href="https://api.github.com/users/NAVAL-KUMAR"&gt;https://api.github.com/users/NAVAL-KUMAR&lt;/a&gt; &lt;span class="error"&gt;No Method setUrl[1] in class com.company.Fixtures.GithubAccount.
+ Available methods:
+Response() -&amp;gt; void
+equals(java.lang.Object) -&amp;gt; boolean
+getClass() -&amp;gt; class java.lang.Class
+hashCode() -&amp;gt; int
+notify() -&amp;gt; void
+notifyAll() -&amp;gt; void
+toString() -&amp;gt; class java.lang.String
+wait() -&amp;gt; void
+wait(long) -&amp;gt; void
+wait(long, int) -&amp;gt; void&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;[&lt;span class="diff"&gt;/__VOID__/&lt;/span&gt;] &lt;span class="fail"&gt;expected [&lt;span class="diff"&gt;200&lt;/span&gt;]&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</content>
+    <relativePageName>GithubResponse</relativePageName>
+    <instructions>
+      <instructionResult>
+        <instruction>{id='import_0_0', instruction='import', path='com.company.Fixtures'}</instruction>
+        <slimResult>pass(com.company.Fixtures)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_0_0</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>com.company.Fixtures</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_0', instruction='make', instanceName='decisionTable_1', className='GithubAccount', args=[]}</instruction>
+        <slimResult>pass(github account)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>decisionTable_1_0</instructionId>
+          <col>0</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>github account</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_4', instruction='call', instanceName='decisionTable_1', methodName='setUrl', args=[&lt;a href="https://api.github.com/users/NAVAL-KUMAR"&gt;https://api.github.com/users/NAVAL-KUMAR&lt;/a&gt;]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_4</instructionId>
+          <type>VoidReturnExpectation</type>
+          <evaluationMessage>No Method setUrl[1] in class com.company.Fixtures.GithubAccount.
+ Available methods:
+Response() -&gt; void
+equals(java.lang.Object) -&gt; boolean
+getClass() -&gt; class java.lang.Class
+hashCode() -&gt; int
+notify() -&gt; void
+notifyAll() -&gt; void
+toString() -&gt; class java.lang.String
+wait() -&gt; void
+wait(long) -&gt; void
+wait(long, int) -&gt; void</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_6', instruction='call', instanceName='decisionTable_1', methodName='response', args=[]}</instruction>
+        <slimResult>fail(a=/__VOID__/;e=200)</slimResult>
+        <expectation>
+          <status>fail</status>
+          <instructionId>decisionTable_1_6</instructionId>
+          <col>1</col>
+          <row>2</row>
+          <type>ReturnedValueExpectation</type>
+          <actual>/__VOID__/</actual>
+          <expected>200</expected>
+        </expectation>
+      </instructionResult>
+    </instructions>
+  </result>
+  <executionLog>
+    <testSystem>slim:fitnesse.slim.SlimService</testSystem>
+    <command>java -cp C:\Users\nkauv\FitnesseExamples\out\production\FitnesseExamples\;C:\Users\nkauv\FitnesseExamples\fitnesse-standalone.jar fitnesse.slim.SlimService 1</command>
+    <exitCode>0</exitCode>
+    <stdOut>200
+java.net.http.HttpHeaders@17a76df { {:status=[200], accept-ranges=[bytes], access-control-allow-origin=[*], access-control-expose-headers=[ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset], cache-control=[public, max-age=60, s-maxage=60], content-length=[1195], content-security-policy=[default-src 'none'], content-type=[application/json; charset=utf-8], date=[Sun, 23 May 2021 09:10:54 GMT], etag=[W/"a0fc0f16170965ed67d39e6b2dfd00d07134a7cd141710672d95a36662d3d897"], last-modified=[Sat, 10 Apr 2021 12:26:41 GMT], referrer-policy=[origin-when-cross-origin, strict-origin-when-cross-origin], server=[GitHub.com], strict-transport-security=[max-age=31536000; includeSubdomains; preload], vary=[Accept, Accept-Encoding, Accept, X-Requested-With], x-content-type-options=[nosniff], x-frame-options=[deny], x-github-media-type=[github.v3; format=json], x-github-request-id=[09F6:0715:15330:2180F:60AA1C1D], x-ratelimit-limit=[60], x-ratelimit-remaining=[54], x-ratelimit-reset=[1621762809], x-ratelimit-resource=[core], x-ratelimit-used=[6], x-xss-protection=[0]} }
+{"login":"NAVAL-KUMAR","id":61471708,"node_id":"MDQ6VXNlcjYxNDcxNzA4","avatar_url":"https://avatars.githubusercontent.com/u/61471708?v=4","gravatar_id":"","url":"https://api.github.com/users/NAVAL-KUMAR","html_url":"https://github.com/NAVAL-KUMAR","followers_url":"https://api.github.com/users/NAVAL-KUMAR/followers","following_url":"https://api.github.com/users/NAVAL-KUMAR/following{/other_user}","gists_url":"https://api.github.com/users/NAVAL-KUMAR/gists{/gist_id}","starred_url":"https://api.github.com/users/NAVAL-KUMAR/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/NAVAL-KUMAR/subscriptions","organizations_url":"https://api.github.com/users/NAVAL-KUMAR/orgs","repos_url":"https://api.github.com/users/NAVAL-KUMAR/repos","events_url":"https://api.github.com/users/NAVAL-KUMAR/events{/privacy}","received_events_url":"https://api.github.com/users/NAVAL-KUMAR/received_events","type":"User","site_admin":false,"name":null,"company":null,"blog":"","location":null,"email":null,"hireable":null,"bio":null,"twitter_username":null,"public_repos":10,"public_gists":1,"followers":3,"following":0,"created_at":"2020-02-25T17:37:09Z","updated_at":"2021-04-10T12:26:41Z"}
+</stdOut>
+    <stdErr></stdErr>
+  </executionLog>
+  <finalCounts>
+    <right>0</right>
+    <wrong>1</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>3252</totalRunTimeInMillis>
+</testResults>
+

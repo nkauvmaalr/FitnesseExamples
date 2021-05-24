@@ -1,0 +1,8 @@
+---
+Test
+---
+!include ImportLibrary
+
+|script :github account                                    |
+|set url                                     |!-https://api.github.com/users/NAVAL-KUMAR-!|
+|check |get response | 200  |

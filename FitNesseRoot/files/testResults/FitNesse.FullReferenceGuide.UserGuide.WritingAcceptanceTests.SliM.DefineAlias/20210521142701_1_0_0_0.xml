@@ -1,0 +1,1256 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20210410</FitNesseVersion>
+  <rootPath>FitNesse.FullReferenceGuide.UserGuide.WritingAcceptanceTests.SliM.DefineAlias</rootPath>
+  <result>
+    <counts>
+      <right>22</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <date>2021-05-21T14:27:01+05:30</date>
+    <runTimeInMillis>371</runTimeInMillis>
+    <content>&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Included page: &lt;a href="FitNesse.FullReferenceGuide.UserGuide.WritingAcceptanceTests.SliM.SetUp"&gt;.FitNesse.FullReferenceGuide.UserGuide.WritingAcceptanceTests.SliM.SetUp&lt;/a&gt; &lt;a href="FitNesse.FullReferenceGuide.UserGuide.WritingAcceptanceTests.SliM.SetUp?edit&amp;amp;redirectToReferer=true&amp;amp;redirectAction=" class="edit"&gt;(edit)&lt;/a&gt;&lt;/p&gt;
+	&lt;div&gt;&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;setup&lt;/p&gt;
+	&lt;div&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;import&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;fitnesse.slim.test&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;fitnesse.fixtures&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;The "Define Alias" table is designed to help you to segregate requirements from the implementation.&lt;br/&gt;&lt;br/&gt;Normally the table name must be a graceful name of the class name used in your implementation.&lt;br/&gt;&lt;br/&gt;This might not be convenient in some situations. &lt;br/&gt;&lt;ul&gt;
+	&lt;li&gt;your implementation is a generic framework, in this case it is unlikely that classnames match the business names&lt;/li&gt;
+	&lt;li&gt;your implementation needs technical configuration parameters which are not important to the business &lt;/li&gt;
+&lt;/ul&gt;
+&lt;br/&gt;  &lt;br/&gt;Below is a dynamic decision table without any alias. This will be used in the following examples with alias definitions&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td colspan="9"&gt;&lt;span class="pass"&gt;ddt: add up change&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;# description&lt;/td&gt;
+		&lt;td&gt;1c&lt;/td&gt;
+		&lt;td&gt;5c&lt;/td&gt;
+		&lt;td&gt;10c&lt;/td&gt;
+		&lt;td&gt;25c&lt;/td&gt;
+		&lt;td&gt;50c&lt;/td&gt;
+		&lt;td&gt;$1&lt;/td&gt;
+		&lt;td&gt;total cents?&lt;/td&gt;
+		&lt;td&gt;$ total?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;some simple addition&lt;/td&gt;
+		&lt;td&gt;2&lt;/td&gt;
+		&lt;td&gt;2&lt;/td&gt;
+		&lt;td&gt;4&lt;/td&gt;
+		&lt;td&gt;0&lt;/td&gt;
+		&lt;td&gt;0&lt;/td&gt;
+		&lt;td&gt;0&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;52&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;0.52&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;h4 id="0"&gt;Use Case 1&lt;/h4&gt;
+The business expects a different name "add change" than your class name "add up change"&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td colspan="2"&gt;Define alias&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;add change&lt;/td&gt;
+		&lt;td&gt;add up change&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td colspan="9"&gt;&lt;span class="pass"&gt;ddt: add change&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;# description&lt;/td&gt;
+		&lt;td&gt;1c&lt;/td&gt;
+		&lt;td&gt;5c&lt;/td&gt;
+		&lt;td&gt;10c&lt;/td&gt;
+		&lt;td&gt;25c&lt;/td&gt;
+		&lt;td&gt;50c&lt;/td&gt;
+		&lt;td&gt;$1&lt;/td&gt;
+		&lt;td&gt;total cents?&lt;/td&gt;
+		&lt;td&gt;$ total?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;some simple addition&lt;/td&gt;
+		&lt;td&gt;2&lt;/td&gt;
+		&lt;td&gt;2&lt;/td&gt;
+		&lt;td&gt;4&lt;/td&gt;
+		&lt;td&gt;0&lt;/td&gt;
+		&lt;td&gt;0&lt;/td&gt;
+		&lt;td&gt;1&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;152&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;1.52&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;h4 id="1"&gt;Use Case 2&lt;/h4&gt;
+The business expects a different name "add up" than your class name "add up change" &lt;br/&gt;and in addition the test case is defined as decision table but you implemented it as dynamic decision table.&lt;br/&gt;You can overwrite the table type and the name.&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td colspan="2"&gt;Define alias&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;add up&lt;/td&gt;
+		&lt;td&gt;ddt: add up change&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td colspan="9"&gt;&lt;span class="pass"&gt;dt: add up&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;# description&lt;/td&gt;
+		&lt;td&gt;1c&lt;/td&gt;
+		&lt;td&gt;5c&lt;/td&gt;
+		&lt;td&gt;10c&lt;/td&gt;
+		&lt;td&gt;25c&lt;/td&gt;
+		&lt;td&gt;50c&lt;/td&gt;
+		&lt;td&gt;$1&lt;/td&gt;
+		&lt;td&gt;total cents?&lt;/td&gt;
+		&lt;td&gt;$ total?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;some simple addition&lt;/td&gt;
+		&lt;td&gt;2&lt;/td&gt;
+		&lt;td&gt;2&lt;/td&gt;
+		&lt;td&gt;4&lt;/td&gt;
+		&lt;td&gt;0&lt;/td&gt;
+		&lt;td&gt;1&lt;/td&gt;
+		&lt;td&gt;0&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;102&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;1.02&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;h4 id="2"&gt;Use Case 3&lt;/h4&gt;
+The names are matching but you need to overwrite the table type.&lt;br/&gt;Note that the &lt;a href="FitNesse.FullReferenceGuide.UserGuide.WritingAcceptanceTests.SliM.DefineTableType"&gt;Define Table Type&lt;/a&gt; table will not overwrite type definitions given in the test.&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td colspan="2"&gt;Define alias&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;add up change&lt;/td&gt;
+		&lt;td&gt;ddt:&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td colspan="9"&gt;&lt;span class="pass"&gt;dt: add up change&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;# description&lt;/td&gt;
+		&lt;td&gt;1c&lt;/td&gt;
+		&lt;td&gt;5c&lt;/td&gt;
+		&lt;td&gt;10c&lt;/td&gt;
+		&lt;td&gt;25c&lt;/td&gt;
+		&lt;td&gt;50c&lt;/td&gt;
+		&lt;td&gt;$1&lt;/td&gt;
+		&lt;td&gt;total cents?&lt;/td&gt;
+		&lt;td&gt;$ total?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;some simple addition&lt;/td&gt;
+		&lt;td&gt;2&lt;/td&gt;
+		&lt;td&gt;2&lt;/td&gt;
+		&lt;td&gt;4&lt;/td&gt;
+		&lt;td&gt;0&lt;/td&gt;
+		&lt;td&gt;0&lt;/td&gt;
+		&lt;td&gt;0&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;52&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;0.52&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;h4 id="3"&gt;Use Case 4&lt;/h4&gt;
+The requirements have been written beforehand with a business name.&lt;br/&gt;Your implementation requires that you prepare the test fixture in a script.&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;script&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;add up change&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor2"&gt;
+		&lt;td&gt;$myfixture&amp;lt;-[fitnesse.slim.test.AddUpChange@f4168b8]&lt;/td&gt;
+		&lt;td&gt;get fixture&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td colspan="2"&gt;Define alias&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;add money&lt;/td&gt;
+		&lt;td&gt;$myfixture&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td colspan="9"&gt;&lt;span class="pass"&gt;ddt: add money&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;# description&lt;/td&gt;
+		&lt;td&gt;1c&lt;/td&gt;
+		&lt;td&gt;5c&lt;/td&gt;
+		&lt;td&gt;10c&lt;/td&gt;
+		&lt;td&gt;25c&lt;/td&gt;
+		&lt;td&gt;50c&lt;/td&gt;
+		&lt;td&gt;$1&lt;/td&gt;
+		&lt;td&gt;total cents?&lt;/td&gt;
+		&lt;td&gt;$ total?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;some simple addition&lt;/td&gt;
+		&lt;td&gt;2&lt;/td&gt;
+		&lt;td&gt;2&lt;/td&gt;
+		&lt;td&gt;4&lt;/td&gt;
+		&lt;td&gt;4&lt;/td&gt;
+		&lt;td&gt;0&lt;/td&gt;
+		&lt;td&gt;1&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;252&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;2.52&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;It doesn't matters if you define the alias before or after you create the fixture.&lt;br/&gt;Again you can add a table type definition if required&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td colspan="2"&gt;Define alias&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;add more money&lt;/td&gt;
+		&lt;td&gt;ddt: $anotherFixture&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;script&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;add up change&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor3"&gt;
+		&lt;td&gt;$anotherFixture&amp;lt;-[fitnesse.slim.test.AddUpChange@3bd94634]&lt;/td&gt;
+		&lt;td&gt;get fixture&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td colspan="9"&gt;&lt;span class="pass"&gt;add more money&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;# description&lt;/td&gt;
+		&lt;td&gt;1c&lt;/td&gt;
+		&lt;td&gt;5c&lt;/td&gt;
+		&lt;td&gt;10c&lt;/td&gt;
+		&lt;td&gt;25c&lt;/td&gt;
+		&lt;td&gt;50c&lt;/td&gt;
+		&lt;td&gt;$1&lt;/td&gt;
+		&lt;td&gt;total cents?&lt;/td&gt;
+		&lt;td&gt;$ total?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;some simple addition&lt;/td&gt;
+		&lt;td&gt;2&lt;/td&gt;
+		&lt;td&gt;2&lt;/td&gt;
+		&lt;td&gt;4&lt;/td&gt;
+		&lt;td&gt;4&lt;/td&gt;
+		&lt;td&gt;0&lt;/td&gt;
+		&lt;td&gt;1&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;252&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;2.52&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;br/&gt;Another example with a constructor parameter&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;script&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;test query&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;2&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show&lt;/td&gt;
+		&lt;td colspan="2"&gt;query&lt;/td&gt;
+	&lt;td&gt;[[[n, 1], [2n, 2]], [[n, 2], [2n, 4]]]&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr class="slimRowColor6"&gt;
+		&lt;td&gt;$tq&amp;lt;-[fitnesse.slim.test.TestQuery@679b62af]&lt;/td&gt;
+		&lt;td colspan="2"&gt;get fixture&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td colspan="2"&gt;Define alias&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;my query&lt;/td&gt;
+		&lt;td&gt;query: $tq&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td colspan="2"&gt;&lt;span class="pass"&gt;my query&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;n&lt;/td&gt;
+		&lt;td&gt;2n&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;1&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;2&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;2&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;4&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;script&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;test query&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;3&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show&lt;/td&gt;
+		&lt;td colspan="2"&gt;query&lt;/td&gt;
+	&lt;td&gt;[[[n, 1], [2n, 2]], [[n, 2], [2n, 4]], [[n, 3], [2n, 6]]]&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr class="slimRowColor6"&gt;
+		&lt;td&gt;$tq&amp;lt;-[fitnesse.slim.test.TestQuery@5cdd8682]&lt;/td&gt;
+		&lt;td colspan="2"&gt;get fixture&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td colspan="2"&gt;Define alias&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;my query&lt;/td&gt;
+		&lt;td&gt;subset query: $tq&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td colspan="2"&gt;&lt;span class="pass"&gt;my query&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;n&lt;/td&gt;
+		&lt;td&gt;2n&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;2&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;4&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;3&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;6&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;h4 id="4"&gt;Use Case 5&lt;/h4&gt;
+If you can't use an &lt;a href="FitNesse.FullReferenceGuide.UserGuide.WritingAcceptanceTests.SliM.ImportTable"&gt;Import&lt;/a&gt; statement or you have import conflicts you can't resolve.&lt;br/&gt;The alias can help you to get around these.&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td colspan="2"&gt;Define alias&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;what is in my pocket&lt;/td&gt;
+		&lt;td&gt;ddt: fitnesse.slim.test.AddUpChange&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td colspan="9"&gt;&lt;span class="pass"&gt;what is in my pocket&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;# description&lt;/td&gt;
+		&lt;td&gt;1c&lt;/td&gt;
+		&lt;td&gt;5c&lt;/td&gt;
+		&lt;td&gt;10c&lt;/td&gt;
+		&lt;td&gt;25c&lt;/td&gt;
+		&lt;td&gt;50c&lt;/td&gt;
+		&lt;td&gt;$1&lt;/td&gt;
+		&lt;td&gt;total cents?&lt;/td&gt;
+		&lt;td&gt;$ total?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;some simple addition&lt;/td&gt;
+		&lt;td&gt;2&lt;/td&gt;
+		&lt;td&gt;2&lt;/td&gt;
+		&lt;td&gt;4&lt;/td&gt;
+		&lt;td&gt;4&lt;/td&gt;
+		&lt;td&gt;0&lt;/td&gt;
+		&lt;td&gt;1&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;252&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;2.52&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;The alias fixture allows QA people to implement requirements by reusing existing framework functions and without writing new code. &lt;br/&gt;Still your test pages are easy to read, especially for project managers, BA's and Product owners who might not understand how Fitnesse works. &lt;br/&gt;&lt;br/&gt;Hint: Try putting the "Define Alias" fixtures in the same place as your "Import" fixtures.   The setup pages are a good place for these!&lt;br/&gt;</content>
+    <relativePageName>DefineAlias</relativePageName>
+    <instructions>
+      <instructionResult>
+        <instruction>{id='import_0_0', instruction='import', path='fitnesse.slim.test'}</instruction>
+        <slimResult>pass(fitnesse.slim.test)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_0_0</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>fitnesse.slim.test</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='import_0_1', instruction='import', path='fitnesse.fixtures'}</instruction>
+        <slimResult>pass(fitnesse.fixtures)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_0_1</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>fitnesse.fixtures</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_1_0', instruction='make', instanceName='dynamicDecisionTable_1', className='AddUpChange', args=[]}</instruction>
+        <slimResult>pass(ddt: add up change)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>dynamicDecisionTable_1_0</instructionId>
+          <col>0</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>ddt: add up change</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_1_4', instruction='call', instanceName='dynamicDecisionTable_1', methodName='set', args=[1c, 2]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>dynamicDecisionTable_1_4</instructionId>
+          <col>1</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_1_5', instruction='call', instanceName='dynamicDecisionTable_1', methodName='set', args=[5c, 2]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>dynamicDecisionTable_1_5</instructionId>
+          <col>2</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_1_6', instruction='call', instanceName='dynamicDecisionTable_1', methodName='set', args=[10c, 4]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>dynamicDecisionTable_1_6</instructionId>
+          <col>3</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_1_7', instruction='call', instanceName='dynamicDecisionTable_1', methodName='set', args=[25c, 0]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>dynamicDecisionTable_1_7</instructionId>
+          <col>4</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_1_8', instruction='call', instanceName='dynamicDecisionTable_1', methodName='set', args=[50c, 0]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>dynamicDecisionTable_1_8</instructionId>
+          <col>5</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_1_9', instruction='call', instanceName='dynamicDecisionTable_1', methodName='set', args=[$1, 0]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>dynamicDecisionTable_1_9</instructionId>
+          <col>6</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_1_11', instruction='call', instanceName='dynamicDecisionTable_1', methodName='get', args=[total cents]}</instruction>
+        <slimResult>pass(52)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>dynamicDecisionTable_1_11</instructionId>
+          <col>7</col>
+          <row>2</row>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>52</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_1_12', instruction='call', instanceName='dynamicDecisionTable_1', methodName='get', args=[$ total]}</instruction>
+        <slimResult>pass(0.52)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>dynamicDecisionTable_1_12</instructionId>
+          <col>8</col>
+          <row>2</row>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>0.52</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_2_0', instruction='make', instanceName='dynamicDecisionTable_2', className='AddUpChange', args=[]}</instruction>
+        <slimResult>pass(ddt: add change)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>dynamicDecisionTable_2_0</instructionId>
+          <col>0</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>ddt: add change</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_2_4', instruction='call', instanceName='dynamicDecisionTable_2', methodName='set', args=[1c, 2]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>dynamicDecisionTable_2_4</instructionId>
+          <col>1</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_2_5', instruction='call', instanceName='dynamicDecisionTable_2', methodName='set', args=[5c, 2]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>dynamicDecisionTable_2_5</instructionId>
+          <col>2</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_2_6', instruction='call', instanceName='dynamicDecisionTable_2', methodName='set', args=[10c, 4]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>dynamicDecisionTable_2_6</instructionId>
+          <col>3</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_2_7', instruction='call', instanceName='dynamicDecisionTable_2', methodName='set', args=[25c, 0]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>dynamicDecisionTable_2_7</instructionId>
+          <col>4</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_2_8', instruction='call', instanceName='dynamicDecisionTable_2', methodName='set', args=[50c, 0]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>dynamicDecisionTable_2_8</instructionId>
+          <col>5</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_2_9', instruction='call', instanceName='dynamicDecisionTable_2', methodName='set', args=[$1, 1]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>dynamicDecisionTable_2_9</instructionId>
+          <col>6</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_2_11', instruction='call', instanceName='dynamicDecisionTable_2', methodName='get', args=[total cents]}</instruction>
+        <slimResult>pass(152)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>dynamicDecisionTable_2_11</instructionId>
+          <col>7</col>
+          <row>2</row>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>152</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_2_12', instruction='call', instanceName='dynamicDecisionTable_2', methodName='get', args=[$ total]}</instruction>
+        <slimResult>pass(1.52)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>dynamicDecisionTable_2_12</instructionId>
+          <col>8</col>
+          <row>2</row>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>1.52</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_3_0', instruction='make', instanceName='dynamicDecisionTable_3', className='AddUpChange', args=[]}</instruction>
+        <slimResult>pass(dt: add up)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>dynamicDecisionTable_3_0</instructionId>
+          <col>0</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>dt: add up</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_3_4', instruction='call', instanceName='dynamicDecisionTable_3', methodName='set', args=[1c, 2]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>dynamicDecisionTable_3_4</instructionId>
+          <col>1</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_3_5', instruction='call', instanceName='dynamicDecisionTable_3', methodName='set', args=[5c, 2]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>dynamicDecisionTable_3_5</instructionId>
+          <col>2</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_3_6', instruction='call', instanceName='dynamicDecisionTable_3', methodName='set', args=[10c, 4]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>dynamicDecisionTable_3_6</instructionId>
+          <col>3</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_3_7', instruction='call', instanceName='dynamicDecisionTable_3', methodName='set', args=[25c, 0]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>dynamicDecisionTable_3_7</instructionId>
+          <col>4</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_3_8', instruction='call', instanceName='dynamicDecisionTable_3', methodName='set', args=[50c, 1]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>dynamicDecisionTable_3_8</instructionId>
+          <col>5</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_3_9', instruction='call', instanceName='dynamicDecisionTable_3', methodName='set', args=[$1, 0]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>dynamicDecisionTable_3_9</instructionId>
+          <col>6</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_3_11', instruction='call', instanceName='dynamicDecisionTable_3', methodName='get', args=[total cents]}</instruction>
+        <slimResult>pass(102)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>dynamicDecisionTable_3_11</instructionId>
+          <col>7</col>
+          <row>2</row>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>102</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_3_12', instruction='call', instanceName='dynamicDecisionTable_3', methodName='get', args=[$ total]}</instruction>
+        <slimResult>pass(1.02)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>dynamicDecisionTable_3_12</instructionId>
+          <col>8</col>
+          <row>2</row>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>1.02</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_4_0', instruction='make', instanceName='dynamicDecisionTable_4', className='AddUpChange', args=[]}</instruction>
+        <slimResult>pass(dt: add up change)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>dynamicDecisionTable_4_0</instructionId>
+          <col>0</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>dt: add up change</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_4_4', instruction='call', instanceName='dynamicDecisionTable_4', methodName='set', args=[1c, 2]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>dynamicDecisionTable_4_4</instructionId>
+          <col>1</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_4_5', instruction='call', instanceName='dynamicDecisionTable_4', methodName='set', args=[5c, 2]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>dynamicDecisionTable_4_5</instructionId>
+          <col>2</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_4_6', instruction='call', instanceName='dynamicDecisionTable_4', methodName='set', args=[10c, 4]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>dynamicDecisionTable_4_6</instructionId>
+          <col>3</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_4_7', instruction='call', instanceName='dynamicDecisionTable_4', methodName='set', args=[25c, 0]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>dynamicDecisionTable_4_7</instructionId>
+          <col>4</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_4_8', instruction='call', instanceName='dynamicDecisionTable_4', methodName='set', args=[50c, 0]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>dynamicDecisionTable_4_8</instructionId>
+          <col>5</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_4_9', instruction='call', instanceName='dynamicDecisionTable_4', methodName='set', args=[$1, 0]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>dynamicDecisionTable_4_9</instructionId>
+          <col>6</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_4_11', instruction='call', instanceName='dynamicDecisionTable_4', methodName='get', args=[total cents]}</instruction>
+        <slimResult>pass(52)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>dynamicDecisionTable_4_11</instructionId>
+          <col>7</col>
+          <row>2</row>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>52</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_4_12', instruction='call', instanceName='dynamicDecisionTable_4', methodName='get', args=[$ total]}</instruction>
+        <slimResult>pass(0.52)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>dynamicDecisionTable_4_12</instructionId>
+          <col>8</col>
+          <row>2</row>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>0.52</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_5_0', instruction='make', instanceName='scriptTableActor', className='AddUpChange', args=[]}</instruction>
+        <slimResult>pass(add up change)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>scriptTable_5_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>add up change</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_5_1', instruction='callAndAssign', symbolName='myfixture', instanceName='scriptTableActor', methodName='getFixture', args=[]}</instruction>
+        <slimResult>$myfixture&lt;-[fitnesse.slim.test.AddUpChange@f4168b8]</slimResult>
+        <expectation>
+          <instructionId>scriptTable_5_1</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>SymbolAssignmentExpectation</type>
+          <evaluationMessage>$myfixture&lt;-[fitnesse.slim.test.AddUpChange@f4168b8]</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_6_0', instruction='make', instanceName='dynamicDecisionTable_6', className='$myfixture', args=[]}</instruction>
+        <slimResult>pass(ddt: add money)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>dynamicDecisionTable_6_0</instructionId>
+          <col>0</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>ddt: add money</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_6_4', instruction='call', instanceName='dynamicDecisionTable_6', methodName='set', args=[1c, 2]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>dynamicDecisionTable_6_4</instructionId>
+          <col>1</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_6_5', instruction='call', instanceName='dynamicDecisionTable_6', methodName='set', args=[5c, 2]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>dynamicDecisionTable_6_5</instructionId>
+          <col>2</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_6_6', instruction='call', instanceName='dynamicDecisionTable_6', methodName='set', args=[10c, 4]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>dynamicDecisionTable_6_6</instructionId>
+          <col>3</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_6_7', instruction='call', instanceName='dynamicDecisionTable_6', methodName='set', args=[25c, 4]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>dynamicDecisionTable_6_7</instructionId>
+          <col>4</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_6_8', instruction='call', instanceName='dynamicDecisionTable_6', methodName='set', args=[50c, 0]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>dynamicDecisionTable_6_8</instructionId>
+          <col>5</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_6_9', instruction='call', instanceName='dynamicDecisionTable_6', methodName='set', args=[$1, 1]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>dynamicDecisionTable_6_9</instructionId>
+          <col>6</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_6_11', instruction='call', instanceName='dynamicDecisionTable_6', methodName='get', args=[total cents]}</instruction>
+        <slimResult>pass(252)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>dynamicDecisionTable_6_11</instructionId>
+          <col>7</col>
+          <row>2</row>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>252</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_6_12', instruction='call', instanceName='dynamicDecisionTable_6', methodName='get', args=[$ total]}</instruction>
+        <slimResult>pass(2.52)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>dynamicDecisionTable_6_12</instructionId>
+          <col>8</col>
+          <row>2</row>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>2.52</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_7_0', instruction='make', instanceName='scriptTableActor', className='AddUpChange', args=[]}</instruction>
+        <slimResult>pass(add up change)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>scriptTable_7_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>add up change</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_7_1', instruction='callAndAssign', symbolName='anotherFixture', instanceName='scriptTableActor', methodName='getFixture', args=[]}</instruction>
+        <slimResult>$anotherFixture&lt;-[fitnesse.slim.test.AddUpChange@3bd94634]</slimResult>
+        <expectation>
+          <instructionId>scriptTable_7_1</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>SymbolAssignmentExpectation</type>
+          <evaluationMessage>$anotherFixture&lt;-[fitnesse.slim.test.AddUpChange@3bd94634]</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_8_0', instruction='make', instanceName='dynamicDecisionTable_8', className='$anotherFixture', args=[]}</instruction>
+        <slimResult>pass(add more money)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>dynamicDecisionTable_8_0</instructionId>
+          <col>0</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>add more money</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_8_4', instruction='call', instanceName='dynamicDecisionTable_8', methodName='set', args=[1c, 2]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>dynamicDecisionTable_8_4</instructionId>
+          <col>1</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_8_5', instruction='call', instanceName='dynamicDecisionTable_8', methodName='set', args=[5c, 2]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>dynamicDecisionTable_8_5</instructionId>
+          <col>2</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_8_6', instruction='call', instanceName='dynamicDecisionTable_8', methodName='set', args=[10c, 4]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>dynamicDecisionTable_8_6</instructionId>
+          <col>3</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_8_7', instruction='call', instanceName='dynamicDecisionTable_8', methodName='set', args=[25c, 4]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>dynamicDecisionTable_8_7</instructionId>
+          <col>4</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_8_8', instruction='call', instanceName='dynamicDecisionTable_8', methodName='set', args=[50c, 0]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>dynamicDecisionTable_8_8</instructionId>
+          <col>5</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_8_9', instruction='call', instanceName='dynamicDecisionTable_8', methodName='set', args=[$1, 1]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>dynamicDecisionTable_8_9</instructionId>
+          <col>6</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_8_11', instruction='call', instanceName='dynamicDecisionTable_8', methodName='get', args=[total cents]}</instruction>
+        <slimResult>pass(252)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>dynamicDecisionTable_8_11</instructionId>
+          <col>7</col>
+          <row>2</row>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>252</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_8_12', instruction='call', instanceName='dynamicDecisionTable_8', methodName='get', args=[$ total]}</instruction>
+        <slimResult>pass(2.52)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>dynamicDecisionTable_8_12</instructionId>
+          <col>8</col>
+          <row>2</row>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>2.52</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_9_0', instruction='make', instanceName='scriptTableActor', className='TestQuery', args=[2]}</instruction>
+        <slimResult>pass(test query)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>scriptTable_9_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>test query</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_9_1', instruction='call', instanceName='scriptTableActor', methodName='query', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>scriptTable_9_1</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ShowActionExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_9_2', instruction='callAndAssign', symbolName='tq', instanceName='scriptTableActor', methodName='getFixture', args=[]}</instruction>
+        <slimResult>$tq&lt;-[fitnesse.slim.test.TestQuery@679b62af]</slimResult>
+        <expectation>
+          <instructionId>scriptTable_9_2</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>SymbolAssignmentExpectation</type>
+          <evaluationMessage>$tq&lt;-[fitnesse.slim.test.TestQuery@679b62af]</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='queryTable_10_0', instruction='make', instanceName='queryTable_10', className='$tq', args=[]}</instruction>
+        <slimResult>pass(my query)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>queryTable_10_0</instructionId>
+          <col>0</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>my query</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='queryTable_10_2', instruction='call', instanceName='queryTable_10', methodName='query', args=[]}</instruction>
+        <slimResult>pass()</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>queryTable_10_2</instructionId>
+          <type>QueryTableExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_11_0', instruction='make', instanceName='scriptTableActor', className='TestQuery', args=[3]}</instruction>
+        <slimResult>pass(test query)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>scriptTable_11_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>test query</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_11_1', instruction='call', instanceName='scriptTableActor', methodName='query', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>scriptTable_11_1</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ShowActionExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_11_2', instruction='callAndAssign', symbolName='tq', instanceName='scriptTableActor', methodName='getFixture', args=[]}</instruction>
+        <slimResult>$tq&lt;-[fitnesse.slim.test.TestQuery@5cdd8682]</slimResult>
+        <expectation>
+          <instructionId>scriptTable_11_2</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>SymbolAssignmentExpectation</type>
+          <evaluationMessage>$tq&lt;-[fitnesse.slim.test.TestQuery@5cdd8682]</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='queryTable_12_0', instruction='make', instanceName='queryTable_12', className='$tq', args=[]}</instruction>
+        <slimResult>pass(my query)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>queryTable_12_0</instructionId>
+          <col>0</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>my query</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='queryTable_12_2', instruction='call', instanceName='queryTable_12', methodName='query', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>queryTable_12_2</instructionId>
+          <type>QueryTableExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_13_0', instruction='make', instanceName='dynamicDecisionTable_13', className='fitnesse.slim.test.AddUpChange', args=[]}</instruction>
+        <slimResult>pass(what is in my pocket)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>dynamicDecisionTable_13_0</instructionId>
+          <col>0</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>what is in my pocket</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_13_4', instruction='call', instanceName='dynamicDecisionTable_13', methodName='set', args=[1c, 2]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>dynamicDecisionTable_13_4</instructionId>
+          <col>1</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_13_5', instruction='call', instanceName='dynamicDecisionTable_13', methodName='set', args=[5c, 2]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>dynamicDecisionTable_13_5</instructionId>
+          <col>2</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_13_6', instruction='call', instanceName='dynamicDecisionTable_13', methodName='set', args=[10c, 4]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>dynamicDecisionTable_13_6</instructionId>
+          <col>3</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_13_7', instruction='call', instanceName='dynamicDecisionTable_13', methodName='set', args=[25c, 4]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>dynamicDecisionTable_13_7</instructionId>
+          <col>4</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_13_8', instruction='call', instanceName='dynamicDecisionTable_13', methodName='set', args=[50c, 0]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>dynamicDecisionTable_13_8</instructionId>
+          <col>5</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_13_9', instruction='call', instanceName='dynamicDecisionTable_13', methodName='set', args=[$1, 1]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>dynamicDecisionTable_13_9</instructionId>
+          <col>6</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_13_11', instruction='call', instanceName='dynamicDecisionTable_13', methodName='get', args=[total cents]}</instruction>
+        <slimResult>pass(252)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>dynamicDecisionTable_13_11</instructionId>
+          <col>7</col>
+          <row>2</row>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>252</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='dynamicDecisionTable_13_12', instruction='call', instanceName='dynamicDecisionTable_13', methodName='get', args=[$ total]}</instruction>
+        <slimResult>pass(2.52)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>dynamicDecisionTable_13_12</instructionId>
+          <col>8</col>
+          <row>2</row>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>2.52</evaluationMessage>
+        </expectation>
+      </instructionResult>
+    </instructions>
+  </result>
+  <executionLog>
+    <testSystem>slim:fitnesse.slim.SlimService</testSystem>
+    <command>java -cp lib/*.jar;C:\Users\nkauv\FitnesseExamples\fitnesse-standalone.jar fitnesse.slim.SlimService 1</command>
+    <exitCode>0</exitCode>
+    <stdOut></stdOut>
+    <stdErr></stdErr>
+  </executionLog>
+  <finalCounts>
+    <right>1</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>897</totalRunTimeInMillis>
+</testResults>
+
