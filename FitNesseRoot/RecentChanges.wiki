@@ -1,9 +1,13 @@
-|FitnesseDemo||16:09:41 Mon, May 24, 2021|
+|FitnesseDemo.DecisionTable||17:11:29 Mon, May 24, 2021|
+|FitnesseDemo.PathAndTestType||17:10:05 Mon, May 24, 2021|
+|FirstTestPage||17:08:42 Mon, May 24, 2021|
+|DemoPage||17:08:01 Mon, May 24, 2021|
+|FrontPage.DemoPage||17:07:28 Mon, May 24, 2021|
+|FitnesseDemo||17:00:46 Mon, May 24, 2021|
 |FitnesseDemo.GithubResponse||16:09:07 Mon, May 24, 2021|
 |FitnesseDemo.LoginDialogDriver||16:08:47 Mon, May 24, 2021|
 |FitnesseDemo.Bowling||16:08:30 Mon, May 24, 2021|
 |FrontPage||15:32:03 Mon, May 24, 2021|
-|FitnesseDemo.DecisionTable||15:29:05 Mon, May 24, 2021|
 |FitnesseExamples.GithubResponse||15:24:04 Mon, May 24, 2021|
 |FitnesseExamples.TableTable||11:18:27 Mon, May 24, 2021|
 |FitnesseExamples.QueryTable||11:18:18 Mon, May 24, 2021|
@@ -20,7 +24,6 @@
 |FitnesseDemo.GenericExample||09:39:53 Fri, May 21, 2021|
 |FitnesseDemo.QueryTable||09:27:19 Fri, May 21, 2021|
 |FitnesseDemo.DynamicTable||09:25:58 Fri, May 21, 2021|
-|FitnesseDemo.PathAndTestType||09:24:06 Fri, May 21, 2021|
 |FitnesseExamples.DemoDecisionTable||09:20:36 Fri, May 21, 2021|
 |FrontPage.FitnesseDemo||09:02:48 Fri, May 21, 2021|
 |FitnesseDemoExample||09:01:52 Fri, May 21, 2021|
